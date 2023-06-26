@@ -1,0 +1,20 @@
+{
+  "name": "AIHH",
+  "description":"Классифицирует обязанности вакансий на сайте hh.ru",
+  "version":"1.0",
+
+  "permissions": ["activeTab", "scripting"],
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://tyumen.hh.ru/*" ],
+      "js": [  "main.js"]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "lang":"ru",
+  "name":"my_ner",
+  "version":"0.0.0",
+  "spacy_version":">=3.5.3,<3.6.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"512241e12",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "ner":[
+      "\u041c\u041e\u0416\u041d\u041e",
+      "\u041d\u0415\u041b\u042c\u0417\u042f"
+    ],
+    "entity_ruler":[
+      "\u041c\u041e\u0416\u041d\u041e",
+      "\u041d\u0415\u041b\u042c\u0417\u042f"
+    ]
+  },
+  "pipeline":[
+    "ner",
+    "entity_ruler"
+  ],
+  "components":[
+    "ner",
+    "entity_ruler"
+  ],
+  "disabled":[
+
+  ]
+}

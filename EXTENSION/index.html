@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="index.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+	
+	
+	<div class="brd" style="width: 600px;position: relative; ">
+    <div class="brd" style="background: linear-gradient(#FFB6C1, #77dd77)">
+		<div  style="font-size: xx-large; color: #111; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; font-weight: bold; text-align: center;" > AI_HH </div>
+		<div align="center">классификация обязанностей на сайте hh.ru</div>
+    </div>
+		<div id="namee" style="font-weight: bold; text-align: center; padding-top: 30px;" >Обязанности объявления:</div>
+		
+		<div id="result" style="padding-top: 10px; ">
+		Загрузка...&nbsp <div id="loading" class="load"></div>
+		</div>
+		
+	</div>
+
+<style>
+.brd {
+border: 2px solid black; /* Параметры границы */
+background: #FFFFFF; /* Цвет фона */
+padding: 5px; /* Поля вокруг текста */
+border-radius: 4px;
+}
+</style>
+<style>
+.button-3 {
+appearance: none;
+background-color: #2ea44f;
+border: 1px solid rgba(27, 31, 35, .15);
+border-radius: 6px;
+box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+padding: 6px 6px;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: middle;
+white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+box-shadow: none;
+outline: none;
+}
+
+.button-3:hover {
+background-color: #2c974b;
+}
+
+.button-3:focus {
+box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+outline: none;
+}
+
+.button-3:disabled {
+background-color: #94d3a2;
+border-color: rgba(27, 31, 35, .1);
+color: rgba(255, 255, 255, .8);
+cursor: default;
+}
+
+.button-3:active {
+background-color: #298e46;
+box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+</style>
+
+<style>
+.button-4 {
+appearance: none;
+background-color: #DB503E;
+border: 1px solid rgba(27, 31, 35, .15);
+border-radius: 6px;
+box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+margin: 10px;
+padding: 6px 6px;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: middle;
+white-space: nowrap;
+}
+
+.button-4:focus:not(:focus-visible):not(.focus-visible) {
+box-shadow: none;
+outline: none;
+}
+
+.button-4:hover {
+background-color: #CC4F3B;
+}
+
+.button-4:focus {
+box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+outline: none;
+}
+
+.button-4:disabled {
+background-color: #FFBAB3;
+border-color: rgba(27, 31, 35, .1);
+color: rgba(255, 255, 255, .8);
+cursor: default;
+}
+
+.button-4:active {
+background-color: #C04A37;
+box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+</style>
+
+<style>
+@keyframes rotate {
+from {
+transform: rotate(0deg);
+}
+to { 
+transform: rotate(360deg);
+}
+}
+
+
+@-webkit-keyframes rotate {
+from {
+-webkit-transform: rotate(0deg);
+}
+to { 
+-webkit-transform: rotate(360deg);
+}
+}
+
+.load {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+width: 20px;
+height: 20px;
+margin: 2px;
+border:solid 4px #965EEB;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+-webkit-transition: all 0.5s ease-in;
+-webkit-animation-name:             rotate; 
+-webkit-animation-duration:         1.0s; 
+-webkit-animation-iteration-count:  infinite;
+-webkit-animation-timing-function: linear;
+
+transition: all 0.5s ease-in;
+animation-name:             rotate; 
+animation-duration:         1.0s; 
+animation-iteration-count:  infinite;
+animation-timing-function: linear; 
+}
+</style>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style>
+
+<script src="buttons.js"></script>
+</body>
+	
+</html>

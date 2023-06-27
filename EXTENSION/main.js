@@ -5,6 +5,7 @@ window.setTimeout(function() {
     if (descriptionBlock != null) {
         //расширение отработает только если на странице обнаружиться блок с описанием объявления
         const descriptionText = document.querySelector(descriptionBlockClass).textContent;
+        const vac_name = document.querySelector('.bloko-header-section-1').textContent;
         console.log(descriptionText);
 
         //тут блок с запросом и получением ответа от сервера
@@ -26,6 +27,23 @@ window.setTimeout(function() {
                     response.json()
                         .then(function(response) {
                             const myRES = response["response"];
+                            console.log(myRES.join());
+                            let arr = new Array();
+
+                            myRES.forEach(function(item, index) {
+
+                                var s = item;
+var htmlObject = document.createElement('div');
+htmlObject.innerHTML = s;         
+                                var s = (index+1) +" "+ htmlObject.getElementsByClassName('entities').innerText
+                                console.log(s);
+                                //htmlObject.innerText = s;
+                                arr.push(index+1, htmlObject.innerHTML)
+                              });
+
+                          var r = arr.join(" ")
+                          console.log(arr);
+                        
                             // Inform the background page that
                             // this tab should have a page-action.
                             chrome.runtime.sendMessage({
@@ -41,7 +59,8 @@ window.setTimeout(function() {
                                     // (For your specific requirements `document.querySelectorAll(...)`
                                     //  should be equivalent to jquery's `$(...)`.)
                                     var domInfo = {
-                                        res: myRES
+                                        res: arr.join(" "),
+                                        name: vac_name
                                     };
 
                                     // Directly respond to the sender (index),
@@ -50,7 +69,7 @@ window.setTimeout(function() {
                                 }
                             });
 
-                            console.log(response);
+                      
                         });
                 } else {
                     throw Error('Something went wrong');
@@ -66,7 +85,7 @@ window.setTimeout(function() {
             "descriptionText": descriptionText
         };
         //для отправки на свой сервер для тестировки, в конце работы нужно закомментить или удалить
-        //postData("http://127.0.0.1:5000/predict", ddata);
+        postData("http://127.0.0.1:5000/predict", ddata);
 
     }
 }, 1000);
